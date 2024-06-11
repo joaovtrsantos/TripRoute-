@@ -17,6 +17,11 @@ namespace Infrastructure.Repositories
             await _routeContext.SaveChangesAsync();
         }
 
+        public async Task<Location> GetById(Guid id)
+        {
+            return await _routeContext.Location.SingleAsync(x => x.Id == id);
+        }
+
         public async Task<List<Location>> GetOriginAndDestinyLocationByName(string originName, string destinyName)
         {
             return await _routeContext.Location.Where(x => x.Name == originName || x.Name == destinyName).ToListAsync();

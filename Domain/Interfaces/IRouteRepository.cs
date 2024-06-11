@@ -11,5 +11,6 @@ namespace Domain.Interfaces
     public interface IRouteRepository : IRepository<Route>
     {
         Task AddAsync(Route route);
+        Task<List<Route>> GetAllAsync();
     }
 }
