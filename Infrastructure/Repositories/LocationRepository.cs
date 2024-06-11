@@ -11,9 +11,9 @@ namespace Infrastructure.Repositories
         private readonly TripRouteContext _routeContext = tripRouteContext;
         public IUnitOfWork UnitOfWork => _routeContext;
 
-        public async Task AddAsync(Route route)
+        public async Task AddAsync(Location location)
         {
-            await _routeContext.AddAsync(route);
+            await _routeContext.AddAsync(location);
             await _routeContext.SaveChangesAsync();
         }
 

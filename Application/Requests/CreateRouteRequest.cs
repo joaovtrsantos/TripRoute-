@@ -1,9 +1,9 @@
 ﻿namespace Application.Requests
 {
-    public class CreateRouteRequest(string originName, string destinyName, double cost)
+    public class CreateRouteRequest(string originLocationName, string destinyLocationName, double cost)
     {
-        public string OriginLocationName { get; set; } = originName;
-        public string DestinyLocationName { get; set; } = destinyName;
+        public string OriginLocationName { get; set; } = originLocationName;
+        public string DestinyLocationName { get; set; } = destinyLocationName;
         public double Cost { get; set; } = cost;
     }
 }

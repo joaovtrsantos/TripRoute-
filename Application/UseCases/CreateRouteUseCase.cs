@@ -9,16 +9,10 @@ namespace Application.UseCases
         public Task CreateRoute(CreateRouteRequest createRouteRequest);
     }
 
-    public class CreateRouteUseCase : ICreateRouteUseCase
+    public class CreateRouteUseCase(IRouteRepository routeRepository, ILocationRepository locationRepository) : ICreateRouteUseCase
     {
-        private readonly IRouteRepository _routeRepository;
-        private readonly ILocationRepository _locationRepository;
-
-        public CreateRouteUseCase(IRouteRepository routeRepository, ILocationRepository locationRepository)
-        {
-            _routeRepository = routeRepository;
-            _locationRepository = locationRepository;
-        }
+        private readonly IRouteRepository _routeRepository = routeRepository;
+        private readonly ILocationRepository _locationRepository = locationRepository;
 
         public async Task CreateRoute(CreateRouteRequest createRouteRequest)
         {

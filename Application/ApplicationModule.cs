@@ -1,4 +1,6 @@
 ﻿using Application.UseCases;
+using Domain.Interfaces;
+using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application
@@ -8,6 +10,10 @@ namespace Application
         public static void AddApplicationModule(this IServiceCollection services)
         {
             services.AddScoped<ICreateRouteUseCase, CreateRouteUseCase>();
+            services.AddScoped<ICreateLocationUseCase, CreateLocationUseCase>();
+
+            services.AddScoped<IRouteRepository, RouteRepository>();
+            services.AddScoped<ILocationRepository, LocationRepository>();
         }
 
     }

@@ -12,6 +12,7 @@ namespace TripRoute.Controllers
         public async Task<StatusCodeResult> CreateRoute(CreateRouteRequest createRouteRequest, ICreateRouteUseCase createRouteUseCase)
         {
             await createRouteUseCase.CreateRoute(createRouteRequest);
+            return Ok();
         }
     }
 }
