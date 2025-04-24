@@ -65,3 +65,10 @@ Run the application using:
 dotnet run
 
 The app should be accessible via http://localhost:5000 (or the port defined in your configuration).
+
+## 👨‍💻 Developed by
+
+**João Vitor Santos**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/jo%C3%A3o-vitor-d-13032413b/)
+[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&style=for-the-badge)](https://github.com/joaovtrsantos)
