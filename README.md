@@ -31,10 +31,10 @@ Make sure you have Visual Studio and .NET Core SDK installed. You can get it fro
 Run the following command to restore the necessary NuGet packages:
 dotnet restore
 
-##🔹 Step 3 – Set Up the Database
+## 🔹 Step 3 – Set Up the Database
 Ensure you have SQL Server installed locally or use a cloud-based solution. Update the appsettings.json file with your database connection string.
 
-##🔹 Step 4 – Apply Migrations
+## 🔹 Step 4 – Apply Migrations
 Run the following command to create the database and apply migrations:
 dotnet ef database update
 
